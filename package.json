@@ -1,0 +1,27 @@
+{
+  "name": "eslint-plugin-no-new-date",
+  "version": "0.1.0",
+  "description": "Disallow new Date().",
+  "main": "./dist/index.js",
+  "scripts": {
+    "prepublish": "tsc -p tsconfig-dist.json",
+    "test": "ts-node tests/tests.ts"
+  },
+  "author": "Suhyun Park <me@shiftpsh.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shiftpsh/eslint-plugin-no-new-date"
+  },
+  "dependencies": {
+    "@typescript-eslint/experimental-utils": "^4.28.3"
+  },
+  "peerDependencies": {
+    "typescript": "^4.3.5"
+  },
+  "devDependencies": {
+    "@types/node": "^16.3.2",
+    "@typescript-eslint/parser": "^4.28.3",
+    "eslint-etc": "^4.1.0",
+    "ts-node": "^10.1.0"
+  }
+}
