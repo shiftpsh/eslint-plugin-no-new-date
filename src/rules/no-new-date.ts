@@ -21,7 +21,7 @@ const rule = ESLintUtils.RuleCreator(
   defaultOptions: [],
   create: (context) => {
     return {
-      'NewExpression[callee.name="Date"][arguments.length==0]'(
+      'NewExpression[callee.name="Date"][arguments.length=0]'(
         node: TSESTree.NewExpression | TSESTree.CallExpression
       ) {
         context.report({
