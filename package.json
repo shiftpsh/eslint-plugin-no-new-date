@@ -1,27 +1,32 @@
 {
   "name": "eslint-plugin-no-new-date",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Disallow new Date().",
-  "main": "./dist/index.js",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
+  "author": "shiftpsh",
+  "main": "lib/index.js",
   "scripts": {
-    "prepublish": "tsc -p tsconfig-dist.json",
-    "test": "ts-node tests/tests.ts"
-  },
-  "author": "Suhyun Park <me@shiftpsh.com>",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/shiftpsh/eslint-plugin-no-new-date"
+    "lint": "eslint .",
+    "test": "mocha tests --recursive"
   },
   "dependencies": {
-    "@typescript-eslint/experimental-utils": "^4.28.3"
-  },
-  "peerDependencies": {
-    "typescript": "^4.3.5"
+    "requireindex": "^1.2.0"
   },
   "devDependencies": {
-    "@types/node": "^16.3.2",
-    "@typescript-eslint/parser": "^4.28.3",
-    "eslint-etc": "^4.1.0",
-    "ts-node": "^10.1.0"
-  }
+    "eslint": "^8.0.1",
+    "eslint-plugin-eslint-plugin": "^4.0.1",
+    "eslint-plugin-node": "^11.1.0",
+    "mocha": "^9.1.3"
+  },
+  "engines": {
+    "node": "12.x || 14.x || >= 16"
+  },
+  "peerDependencies": {
+    "eslint": ">=6"
+  },
+  "license": "ISC"
 }
